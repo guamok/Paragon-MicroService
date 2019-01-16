@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   This file is an assembly descriptor for deployment purposes.
+   @author oyegorov   
+-->
+<assembly>
+   <id>paragon-client</id>
+   <baseDirectory></baseDirectory>
+   <formats>
+      <format>ear</format>
+   </formats>
+   <files>
+      <file>
+         <source>${project.build.directory}/${project.build.finalName}.war</source>
+         <outputDirectory>.</outputDirectory>
+      </file>
+      <file>
+		 <source>${project.build.directory}/application.xml</source>
+		 <outputDirectory>META-INF</outputDirectory>
+      </file>
+   </files>
+</assembly>

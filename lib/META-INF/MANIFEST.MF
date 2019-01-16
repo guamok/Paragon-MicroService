@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+GitLocation: 
+GitRevisionNumber: 
+Archiver-Version: Plexus Archiver
+Built-By: tcagent
+Build-Tag: 
+BuildTime: 2018-06-13T07:53:42Z
+ProjectVersion: 0.0.2
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_152
+

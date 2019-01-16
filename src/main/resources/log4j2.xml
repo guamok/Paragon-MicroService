@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{dd-MM-yyyy HH:mm:ss.SSS} %5p ${hostname} --- [%15.15t] %-40.40c{1} : %m%n%ex
+        </Property>
+    </Properties>
+    <ThresholdFilter/>
+
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <RollingFile name="FileAppender" filename="../logs/log4j2-paragon.log"
+                     filePattern="../logs/log4j2-paragon-%d%d{dd-MM-yyyy}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <!--<DefaultRolloverStrategy max="10" />-->
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.db.paragon.service" level="ALL" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender" />
+        </Logger>
+
+        <Root level="ALL">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+        </Root>
+
+    </Loggers>
+
+</Configuration>
