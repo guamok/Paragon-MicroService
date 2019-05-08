@@ -20,7 +20,7 @@ import org.springframework.web.WebApplicationInitializer;
 
  
 @SpringBootApplication
-@EnableAsync
+@EnableAsync 
 //@EnableScheduling
 @EnableJpaRepositories
 @ComponentScan(value = "com.db.paragon")
