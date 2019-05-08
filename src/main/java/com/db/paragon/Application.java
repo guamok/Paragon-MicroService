@@ -21,7 +21,7 @@ import org.springframework.web.WebApplicationInitializer;
  
 @SpringBootApplication
 @EnableAsync 
-//@EnableScheduling
+//@EnableScheduling jajajajaja
 @EnableJpaRepositories
 @ComponentScan(value = "com.db.paragon")
 @Configuration
